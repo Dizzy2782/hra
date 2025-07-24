@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stolní hry online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="lobby">
+    <h1>Stolní hry online</h1>
+    <input id="nickname" placeholder="Přezdívka" maxlength="16">
+    <input id="tableName" placeholder="Název stolu" maxlength="16">
+    <button id="createTable">Vytvořit stůl</button>
+    <button id="joinTable">Připojit se ke stolu</button>
+    <div id="lobbyMsg"></div>
+  </div>
+  <div id="game" style="display:none;">
+    <h2 id="tableTitle"></h2>
+    <div id="players"></div>
+    <div id="yourCards"></div>
+    <div id="pot"></div>
+    <div id="turnInfo"></div>
+    <button id="startGame" style="display:none;">Spustit hru</button>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
